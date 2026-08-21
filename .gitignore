@@ -1,0 +1,6 @@
+.local-learning/
+.env
+.env.*
+*.key
+*.pem
+
