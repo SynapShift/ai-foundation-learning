@@ -24,6 +24,7 @@ The handbook favors understanding depth over speed. It avoids treating foundatio
 ## What This Repository Contains
 
 - `LEARNING_MAP.md`: a dependency-oriented knowledge map.
+- `ROADMAP.md`: a phased public roadmap for learning foundation models.
 - `handbook/`: beginner-friendly explanations that can be read independently.
 - `exercises/`: reusable exercises for checking understanding.
 - `notes/`: glossary entries and common misconceptions.
@@ -48,4 +49,3 @@ Attention
 ```
 
 More topics will be added only when the explanation is stable enough to be useful for other learners.
-
