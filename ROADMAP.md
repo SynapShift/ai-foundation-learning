@@ -83,6 +83,29 @@ Topics:
 
 ## Phase 5: Training and Alignment
 
+Goal: understand how LLMs are connected to tools, tasks, evaluation loops, and real working environments.
+
+Topics:
+
+- What an agent is
+- Model vs agent vs application
+- Tool use
+- Planning and reflection
+- Memory and state
+- Agent harnesses
+- Evaluation harnesses
+- Task environments
+- Failure modes and guardrails
+- Product and engineering trade-offs
+
+Key distinctions:
+
+- A model predicts tokens; an agent uses a model inside a task loop.
+- A harness is the surrounding structure that calls the model, provides tools, tracks state, runs evaluations, and manages execution.
+- Agent capability depends on the model, the tools, the task environment, and the harness design.
+
+## Phase 6: Training and Alignment
+
 Goal: understand how foundation models acquire capabilities and behavior preferences.
 
 Topics:
@@ -94,7 +117,7 @@ Topics:
 - Reasoning training
 - Evaluation and benchmark limits
 
-## Phase 6: Image Generation Foundations
+## Phase 7: Image Generation Foundations
 
 Goal: understand how generative models represent and create images.
 
@@ -111,7 +134,7 @@ Topics:
 - Flow matching
 - Rectified flow
 
-## Phase 7: Video Generation Foundations
+## Phase 8: Video Generation Foundations
 
 Goal: understand how image generation extends into time and motion.
 
@@ -131,4 +154,3 @@ Topics:
 ## Maintenance Rule
 
 Public handbook content should be added only after an explanation becomes stable, reusable, and independently readable.
-

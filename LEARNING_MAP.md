@@ -41,7 +41,17 @@ Foundation Models
 |   |
 |   +-- Agent Systems
 |       +-- Agent
+|       |   +-- Tool Use
+|       |   +-- Planning
+|       |   +-- Memory / State
+|       |   +-- Reflection
+|       |
 |       +-- Harness
+|           +-- Model Calling Loop
+|           +-- Tool Router
+|           +-- Task Environment
+|           +-- Evaluation Harness
+|           +-- Guardrails
 |
 +-- Image Generation
 |   +-- AutoEncoder
@@ -75,4 +85,6 @@ Foundation Models
 3. Scaled dot-product attention: why score scale matters before softmax.
 4. Softmax: how scores become weights.
 5. Value aggregation: how information is mixed after attention weights are computed.
-
+6. Hidden states and vocabulary logits: why attention output is not the final token probability.
+7. Temperature: how logit scaling changes softmax sharpness.
+8. Agent and harness basics: how models become task-running systems.
