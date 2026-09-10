@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>Foundation Atlas</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">FA</span>
+          <div><small>FOUNDATION ATLAS</small><h1>基础模型学习地图</h1></div>
+        </div>
+        <div class="total-progress" aria-label="总学习进度">
+          <div><span id="progressLabel">0 / 0 节点</span><strong id="progressPercent">0%</strong></div>
+          <i><b id="progressBar"></b></i>
+        </div>
+        <div class="top-actions">
+          <button class="button quiet" id="importButton" type="button">导入进度</button>
+          <button class="button quiet" id="exportButton" type="button">导出进度</button>
+          <input id="importInput" type="file" accept="application/json" hidden />
+        </div>
+      </header>
+
+      <aside class="sidebar" id="sidebar" aria-label="学习路线">
+        <div class="aside-title">
+          <p class="label">学习领域</p>
+          <button class="icon-button mobile-only" id="closeSidebar" type="button" aria-label="关闭路线面板">×</button>
+        </div>
+        <nav class="track-list" id="trackList"></nav>
+        <hr />
+        <p class="label inset">节点状态</p>
+        <div class="legend">
+          <span><i class="mastered"></i>已掌握</span>
+          <span><i class="learning"></i>学习中</span>
+          <span><i class="available"></i>可学习</span>
+          <span><i class="locked"></i>未解锁</span>
+        </div>
+        <div class="today-card">
+          <p class="label">今日推进</p>
+          <strong id="todayMinutes">0 分钟</strong>
+          <span id="todaySummary">打开一个节点，开始今天的学习。</span>
+        </div>
+      </aside>
+
+      <main class="map-panel">
+        <div class="map-toolbar">
+          <button class="button quiet mobile-only" id="openSidebar" type="button">路线</button>
+          <div class="track-heading"><p class="label" id="trackKicker"></p><h2 id="trackTitle"></h2></div>
+          <div class="zoom-controls" aria-label="地图缩放">
+            <button class="icon-button" id="zoomOut" type="button" aria-label="缩小">−</button>
+            <button class="zoom-readout" id="resetView" type="button" aria-label="重置视图">100%</button>
+            <button class="icon-button" id="zoomIn" type="button" aria-label="放大">+</button>
+          </div>
+        </div>
+        <div class="map-viewport" id="mapViewport">
+          <div class="dot-grid" aria-hidden="true"></div>
+          <div class="map-stage" id="mapStage">
+            <svg id="edgeLayer" class="edge-layer" viewBox="0 0 1120 760" aria-hidden="true"></svg>
+            <div id="nodeLayer" class="node-layer"></div>
+          </div>
+          <p class="map-tip">拖动画布探索 · 滚轮缩放 · 点击节点学习</p>
+        </div>
+      </main>
+
+      <aside class="lesson-panel" id="lessonPanel" aria-label="学习内容">
+        <div class="empty-lesson" id="emptyLesson">
+          <span>◎</span><h2>选择一个节点</h2>
+          <p>先读材料，再做一个小诊断。学习状态只保存在本机。</p>
+        </div>
+        <article id="lessonContent" class="lesson-content" hidden>
+          <div class="lesson-top">
+            <div><span id="lessonStatus" class="status-pill"></span><p id="lessonMeta"></p></div>
+            <button class="icon-button" id="closeLesson" type="button" aria-label="关闭学习内容">×</button>
+          </div>
+          <h2 id="lessonTitle"></h2>
+          <p class="lesson-summary" id="lessonSummary"></p>
+
+          <section><p class="label">为什么要学</p><p id="lessonWhy"></p></section>
+          <section><p class="label">核心材料</p><ul id="lessonPoints"></ul><pre id="lessonFormula"></pre></section>
+          <section class="checkpoint">
+            <div><p class="label">理解检查</p><small>不是考试，只用来决定下一步</small></div>
+            <p class="question" id="questionText"></p>
+            <div class="answer-list" id="answerList"></div>
+            <div class="feedback" id="answerFeedback" hidden></div>
+          </section>
+          <section>
+            <p class="label">实战沙盘</p><p id="sandboxPrompt"></p>
+            <textarea id="learnerNote" rows="4" placeholder="写下你的解释、困惑或推理过程……"></textarea>
+          </section>
+          <div class="lesson-actions">
+            <button class="button primary" id="completeButton" type="button">标记为已掌握</button>
+            <button class="button secondary" id="mentorButton" type="button">生成导师消息</button>
+          </div>
+          <p class="mentor-tip">会复制当前节点和你的笔记，回到 Codex 直接发送即可。</p>
+        </article>
+      </aside>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="../.local-learning/learning-state.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -29,6 +29,7 @@ The handbook favors understanding depth over speed. It avoids treating foundatio
 - `exercises/`: reusable exercises for checking understanding.
 - `notes/`: glossary entries and common misconceptions.
 - `prompts/`: reusable prompts for adaptive AI tutoring and self-study.
+- `learning-page/`: a dependency-free local knowledge-tree interface with node unlocking and sandbox exercises.
 - `AGENTS.md`: long-term rules for maintaining the learning system.
 
 ## Privacy Boundary
