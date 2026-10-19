@@ -1,15 +1,18 @@
 # LLM Handbook
 
-This section explains large language models from first principles, starting with Transformer attention and gradually moving toward training, inference, and agent systems.
+This section explains large language models from first principles. Each chapter is a standalone document with a short explanation, key distinctions, reusable questions, and reference answers.
 
-Early path:
+| Chapter | Topic |
+| --- | --- |
+| 1 | [Attention: Q/K/V, scaling, weights, value aggregation](attention.md) |
+| 2 | [Hidden states, logits, and two softmaxes](02-hidden-states-and-output.md) |
+| 3 | [Transformer block: residual, norm, attention, FFN](03-transformer-block.md) |
+| 4 | [Autoregressive generation: sampling, masking, KV cache](04-generation.md) |
+| 5 | [Modern architecture and inference engineering](05-inference-engineering.md) |
+| 6 | [Pretraining and parameter updates](06-pretraining.md) |
+| 7 | [Instruction and preference alignment](07-alignment.md) |
+| 8 | [Evaluation, generalization, and reasoning](08-evaluation.md) |
+| 9 | [Model, Agent, and Harness](09-agent-harness.md) |
 
-1. Attention
-2. Q / K / V
-3. Scaled dot-product attention
-4. Softmax
-5. Value aggregation
-6. Multi-head attention
-7. Causal masking
-8. RoPE and KV cache
+The chapters cover the core concepts currently in the public learning path. They are not a claim of exhaustive implementation-level treatment. Image and video generation have separate future sections.
 

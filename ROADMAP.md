@@ -83,6 +83,19 @@ Topics:
 
 ## Phase 5: Training and Alignment
 
+Goal: understand how foundation models acquire capabilities and behavior preferences.
+
+Topics:
+
+- Pretraining
+- Supervised fine-tuning
+- RLHF and RLAIF
+- DPO
+- Reasoning training
+- Evaluation and benchmark limits
+
+## Phase 6: Agent Systems and Harnesses
+
 Goal: understand how LLMs are connected to tools, tasks, evaluation loops, and real working environments.
 
 Topics:
@@ -103,19 +116,6 @@ Key distinctions:
 - A model predicts tokens; an agent uses a model inside a task loop.
 - A harness is the surrounding structure that calls the model, provides tools, tracks state, runs evaluations, and manages execution.
 - Agent capability depends on the model, the tools, the task environment, and the harness design.
-
-## Phase 6: Training and Alignment
-
-Goal: understand how foundation models acquire capabilities and behavior preferences.
-
-Topics:
-
-- Pretraining
-- Supervised fine-tuning
-- RLHF and RLAIF
-- DPO
-- Reasoning training
-- Evaluation and benchmark limits
 
 ## Phase 7: Image Generation Foundations
 

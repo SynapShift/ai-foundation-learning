@@ -87,4 +87,5 @@ Foundation Models
 5. Value aggregation: how information is mixed after attention weights are computed.
 6. Hidden states and vocabulary logits: why attention output is not the final token probability.
 7. Temperature: how logit scaling changes softmax sharpness.
-8. Agent and harness basics: how models become task-running systems.
+8. Pretraining and alignment: how persistent model weights are learned and steered.
+9. Agent and harness basics: how models become task-running systems.

@@ -38,15 +38,10 @@ Public materials in this repository should be general, reusable, and depersonali
 
 Private learning state, including personal progress, mastery level, mistakes, daily logs, and learning diagnostics, belongs in `.local-learning/`. That directory is ignored by Git and must not be committed or pushed.
 
-## Current Public Starting Point
+## License
 
-The initial public content starts with the LLM attention path:
+The public repository is available under the [MIT License](LICENSE).
 
-```text
-Attention
--> Q / K / V
--> Scaled Dot-Product Attention
--> Softmax
-```
+## Start Reading
 
-More topics will be added only when the explanation is stable enough to be useful for other learners.
+The [LLM handbook](handbook/llm/README.md) has chapter-by-chapter lessons and reusable questions, from Attention through Agent/Harness. Image and video generation remain separate planned paths; the LLM chapters are an introductory core, not an exhaustive treatment of every implementation detail.

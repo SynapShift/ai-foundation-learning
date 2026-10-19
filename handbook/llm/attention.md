@@ -1,48 +1,30 @@
-# Attention
+# 第 1 章：Attention 与 Q/K/V
 
-Attention is a mechanism for letting each token decide which other tokens are useful when updating its own representation.
+[下一章：Hidden State 与输出](02-hidden-states-and-output.md)
 
-## Why Attention Is Needed
+## 为什么需要 Attention
 
-A language model does not understand a token in isolation. In the sentence:
+一个 token 的含义会受上下文影响。例如：
 
 ```text
 The animal did not cross the street because it was tired.
 ```
 
-the meaning of `it` depends on other tokens. A model needs a way to route information between related positions. Attention is one of the central mechanisms that does this routing.
+这里 `it` 的指代需要参考前面的词。`Attention（注意力）`提供一种在 token 位置之间选择并汇集信息的机制。
 
-## Intuition
+## 从直觉到计算
 
-A useful intuition is:
+每个位置先有一个 `hidden state（隐藏状态）`向量。模型用三组学习得到的线性投影，从同一个输入向量算出：
 
-```text
-Q and K decide which tokens are relevant.
-V provides the information that will be gathered.
-```
+- `Q / Query（查询）`：当前位置要寻找什么样的信息。
+- `K / Key（键）`：当前位置可怎样被匹配。
+- `V / Value（值）`：匹配后可以传递什么信息。
 
-Short version:
-
-```text
-QK decides who to look at.
-V decides what information to take.
-```
-
-This is an intuition, not a complete mathematical definition. The real computation uses learned projections, dot products, softmax, and weighted sums.
-
-## Q / K / V
-
-In self-attention, each token starts with a hidden state. The model applies three learned linear projections to create:
-
-- `Q` query: what this token is looking for.
-- `K` key: what this token can be matched by.
-- `V` value: what information this token can pass forward if attended to.
-
-The three projections do not create new information from nowhere. They reshape the same hidden state into three functional spaces: querying, matching, and carrying information.
+可以暂时记成“Q/K 判断看谁，V 提供取什么”。这只是直觉：真正的计算是向量点积、softmax 和加权求和。Q、K、V 不是三份独立的原始输入，也不是无中生有地增加信息，而是同一 hidden state 在不同功能空间中的投影。
 
 ## Scaled Dot-Product Attention
 
-The core computation is:
+简化代码如下：
 
 ```python
 scores = q @ k.transpose(-2, -1)
@@ -51,65 +33,26 @@ weights = torch.softmax(scores, dim=-1)
 output = weights @ v
 ```
 
-If `q` has shape:
+若 `q` 的形状是 `[batch, heads, query_tokens, head_dim]`，`k` 是 `[batch, heads, key_tokens, head_dim]`，则 `scores` 为 `[batch, heads, query_tokens, key_tokens]`。每个分数表示某个查询位置与某个可见 key 位置的匹配程度。用于自回归语言模型时，不允许看见的未来位置会在 softmax 前被 mask 掉。
 
-```text
-[batch, heads, query_tokens, head_dim]
-```
+为什么除以 `sqrt(head_dim)`？维度增大时，Q/K 点积的尺度可能变大，让 softmax 过早变得极端。按维度平方根缩放有助于稳定分数范围。这是 `score scaling（分数缩放）`，不是把向量长度归一为 1，也不是 LayerNorm 那样减均值、除标准差。
 
-and `k` has shape:
+`Attention softmax`在可见 key 位置之间分配权重；对每个查询位置，这些权重加起来为 1。随后 `weights @ v` 汇集对应 V，得到新的表示。Softmax 自己不负责取出信息；它给权重，V 承载被加权的信息。
 
-```text
-[batch, heads, key_tokens, head_dim]
-```
+## 理解检查
 
-then `k.transpose(-2, -1)` has shape:
+1. Q/K 和 V 在这条计算链里分别起什么作用？
+2. 除以 `sqrt(head_dim)` 是分数缩放，还是把每个 Q 向量归一成长度 1？
+3. Attention softmax 在上下文位置之间分配权重，还是直接给词表里的下一 token 分配概率？
+4. 两个头看同一输入，它们的注意力权重必须相同吗？
 
-```text
-[batch, heads, head_dim, key_tokens]
-```
+<details><summary>参考答案</summary>
 
-so `q @ k.transpose(-2, -1)` produces:
+1. Q/K 形成匹配分数；权重作用于 V，汇集其承载的信息。
+2. 是分数缩放，不是向量长度归一。
+3. 在可见 key 位置之间分配权重；词表概率属于后面的输出层。
+4. 不必相同。各头可以使用不同的学习投影参数。
 
-```text
-[batch, heads, query_tokens, key_tokens]
-```
+</details>
 
-Each score says how strongly one query token matches one key token.
-
-## Why Divide by `sqrt(head_dim)`
-
-As `head_dim` grows, the dot product between `Q` and `K` can become larger in magnitude. If the attention scores become too large before softmax, softmax can become very sharp too early: one token gets almost all the probability and the rest get almost none.
-
-Dividing by `sqrt(head_dim)` scales the logits back to a more stable range.
-
-This is better described as score scaling, not ordinary normalization. It does not make the vector length equal to 1, and it does not subtract a mean or divide by a standard deviation like many normalization layers do.
-
-## Softmax
-
-Softmax turns raw attention scores into weights:
-
-```text
-raw scores -> attention weights
-```
-
-It is applied over the key-token dimension. For each query token, the weights across all candidate key tokens sum to 1.
-
-That means the model is deciding how much information to take from each possible source token.
-
-## Value Aggregation
-
-After softmax, the model computes:
-
-```python
-output = weights @ v
-```
-
-This creates a weighted mixture of value vectors. Tokens with larger attention weights contribute more to the output representation.
-
-## Common Misconceptions
-
-- `Q`, `K`, and `V` are not three separate sources of raw input. They are learned projections of the hidden state.
-- Dividing by `sqrt(head_dim)` is attention score scaling, not ordinary vector normalization.
-- Softmax does not retrieve information by itself. It creates weights; the information comes from the weighted sum over `V`.
-
+[更多练习](../../exercises/llm/attention.md)

@@ -15,3 +15,9 @@ Why
 
 The handbook is not a transcript. It should not refer to private learning history or personal progress.
 
+## Chapters
+
+- [LLM: nine chapters from attention through Agent/Harness](llm/README.md)
+- [Image generation: planned topics](image-generation/README.md)
+- [Video generation: planned topics](video-generation/README.md)
+
