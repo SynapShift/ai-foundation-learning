@@ -1,0 +1,40 @@
+site_name: AI 基础模型手册
+site_url: https://synapshift.github.io/ai-foundation-learning/zh/
+docs_dir: ../handbook/zh
+site_dir: ../site/zh
+repo_url: https://github.com/SynapShift/ai-foundation-learning
+repo_name: SynapShift/ai-foundation-learning
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.sections
+    - navigation.tracking
+    - search.suggest
+    - content.code.copy
+  palette:
+    primary: teal
+    accent: amber
+plugins:
+  - search
+extra:
+  alternate:
+    - name: 中文
+      link: /ai-foundation-learning/zh/
+      lang: zh
+    - name: English
+      link: /ai-foundation-learning/en/
+      lang: en
+nav:
+  - 首页: index.md
+  - LLM:
+      - 课程目录: llm/index.md
+      - 01 Attention: llm/01-attention.md
+      - 02 Hidden State 与 Softmax: llm/02-hidden-states-and-output.md
+      - 03 Transformer Block: llm/03-transformer-block.md
+      - 04 自回归生成: llm/04-generation.md
+      - 05 推理工程: llm/05-inference-engineering.md
+      - 06 预训练: llm/06-pretraining.md
+      - 07 指令与偏好对齐: llm/07-alignment.md
+      - 08 评估与泛化: llm/08-evaluation.md
+      - 09 Agent 与 Harness: llm/09-agent-harness.md

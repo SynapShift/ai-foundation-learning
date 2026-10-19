@@ -1,4 +1,7 @@
 .local-learning/
+.venv/
+site/
+__pycache__/
 .env
 .env.*
 *.key
