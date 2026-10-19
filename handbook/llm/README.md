@@ -4,7 +4,7 @@ This section explains large language models from first principles. Each chapter 
 
 | Chapter | Topic |
 | --- | --- |
-| 1 | [Attention: Q/K/V, scaling, weights, value aggregation](attention.md) |
+| 1 | [Attention: Q/K/V, scaling, weights, value aggregation](01-attention.md) |
 | 2 | [Hidden states, logits, and two softmaxes](02-hidden-states-and-output.md) |
 | 3 | [Transformer block: residual, norm, attention, FFN](03-transformer-block.md) |
 | 4 | [Autoregressive generation: sampling, masking, KV cache](04-generation.md) |

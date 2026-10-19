@@ -1,6 +1,6 @@
 # 第 2 章：Hidden State、Logits 与两次 Softmax
 
-[上一章：Attention](attention.md) | [下一章：Transformer Block](03-transformer-block.md)
+[上一章：Attention](01-attention.md) | [下一章：Transformer Block](03-transformer-block.md)
 
 ## 为什么需要这一章
 
