@@ -4,7 +4,7 @@
 
 我们从最小的一步讲起，沿着数据流走过九章。不是先背名词，而是把每个机制放回它所解决的问题里。
 
-[English edition](https://synapshift.github.io/ai-foundation-learning/en/)
+[English README](https://github.com/SynapShift/ai-foundation-learning/blob/main/README.md) · [English web edition](https://synapshift.github.io/ai-foundation-learning/en/)
 
 ## 从哪里开始？
 
