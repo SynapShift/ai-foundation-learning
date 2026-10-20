@@ -1,10 +1,18 @@
 # AI Foundation Handbook · English Edition
 
-Start with information flow inside a language model, then continue through inference, training, evaluation, and agent systems. Every chapter has an explanation, key distinctions, questions, and expandable reference answers. Read in order or jump to a topic.
+What actually happens after you send a sentence to a model? How does it use earlier tokens, choose the next one, and eventually work with files and tools?
 
-[中文版](https://github.com/SynapShift/ai-foundation-learning/blob/main/handbook/zh/README.md)
+This nine-chapter handbook follows that trail, one mechanism at a time. The point is not to memorize a glossary, but to see what problem each idea solves.
 
-## LLM Course Contents
+[中文版](https://synapshift.github.io/ai-foundation-learning/zh/)
+
+## Where to begin
+
+- **First time here?** Start with [01 Attention](llm/01-attention.md), then follow the path from the model's internals to generation, training, and agent systems.
+- **Have a question already?** Use the key questions below to jump to the right chapter.
+- **Finished a chapter?** Try its questions in your own words before opening the reference answers. Revisit the explanation whenever you need to.
+
+## Nine-chapter reading path
 
 | Chapter | Topic | Key question |
 | --- | --- | --- |
@@ -18,4 +26,4 @@ Start with information flow inside a language model, then continue through infer
 | 08 | [Evaluation, generalization, and reasoning](llm/08-evaluation.md) | What can training and test scores establish? |
 | 09 | [Model, Agent, and Harness](llm/09-agent-harness.md) | How do models, tools, and the runtime work together? |
 
-This public material is reusable and depersonalized. It contains no individual's progress, actual answers, or ability assessment.
+First trace how information moves inside a model. Then see how generation is made practical, how training changes model weights, how answers are evaluated, and what happens when a model becomes part of a tool-using Agent system.

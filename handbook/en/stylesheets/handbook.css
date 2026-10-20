@@ -1,0 +1,23 @@
+:root {
+  --md-primary-fg-color: #242a30;
+  --md-primary-fg-color--light: #46505a;
+  --md-primary-fg-color--dark: #171b20;
+  --md-accent-fg-color: #b54139;
+  --md-typeset-a-color: #9c352f;
+}
+body { background: #f7f8f7; color: #242a30; }
+.md-header, .md-tabs { background: #242a30; }
+.md-main__inner { margin-top: 1.4rem; }
+.md-content { background: transparent; }
+.md-typeset { font-size: .78rem; line-height: 1.75; }
+.md-typeset h1 { color: #242a30; font-weight: 750; }
+.md-typeset h2 { font-weight: 690; }
+.md-content .md-typeset a { color: #9c352f; text-decoration: underline; text-decoration-color: #d9afa9; text-underline-offset: .15em; }
+.md-typeset a:hover { color: #b54139; }
+.md-typeset table:not([class]) { background: #fff; }
+.md-typeset table:not([class]) th { background: #303944; color: #fff; }
+.md-typeset table:not([class]) tr:hover { background: #f7f2f0; }
+.md-typeset details { border-color: #d7d8d5; }
+.md-nav__link--active, .md-nav__link:hover { color: #b54139; }
+::selection { color: #242a30; background: #f3cec6; }
+@media screen and (max-width: 76.234375em) { .md-content { background: transparent; } }
