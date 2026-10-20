@@ -27,8 +27,8 @@ An open, bilingual handbook on how large language models work, from attention an
 | 08 | [评估、泛化与推理](handbook/zh/llm/08-evaluation.md) | [Evaluation, generalization, and reasoning](handbook/en/llm/08-evaluation.md) |
 | 09 | [Model、Agent 与 Harness](handbook/zh/llm/09-agent-harness.md) | [Model, Agent, and Harness](handbook/en/llm/09-agent-harness.md) |
 
-Read in order for the full learning path, or jump to a topic when revisiting a concept. The material is about reusable concepts and systems, not an individual's learning history.
+Read in order for the full learning path, or jump to a topic when revisiting a concept.
 
-建议首次按章节顺序阅读；复习时可直接跳转到相关主题。公开内容只讨论可复用的知识，不记录任何人的学习过程。
+建议首次按章节顺序阅读；复习时可直接跳转到相关主题。
 
 Licensed under [MIT](LICENSE).
