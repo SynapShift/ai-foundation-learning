@@ -1,6 +1,6 @@
 # Chapter 5: Modern Architecture and Inference Engineering
 
-[阅读中文版](https://synapshift.github.io/ai-foundation-learning/zh/llm/05-inference-engineering/)
+[阅读中文版](https://github.com/SynapShift/ai-foundation-learning/blob/main/handbook/zh/llm/05-inference-engineering.md)
 
 [Previous: Autoregressive generation](04-generation.md) | [Next: Pretraining](06-pretraining.md)
 

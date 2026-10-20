@@ -1,6 +1,6 @@
 # 第 6 章：预训练与参数更新
 
-[Read in English](https://synapshift.github.io/ai-foundation-learning/en/llm/06-pretraining/)
+[Read in English](https://github.com/SynapShift/ai-foundation-learning/blob/main/handbook/en/llm/06-pretraining.md)
 
 [上一章：推理工程](05-inference-engineering.md) | [下一章：指令与偏好对齐](07-alignment.md)
 

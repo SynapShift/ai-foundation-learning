@@ -1,6 +1,6 @@
 # Chapter 9: Model, Agent, and Harness
 
-[阅读中文版](https://synapshift.github.io/ai-foundation-learning/zh/llm/09-agent-harness/)
+[阅读中文版](https://github.com/SynapShift/ai-foundation-learning/blob/main/handbook/zh/llm/09-agent-harness.md)
 
 [Previous: Evaluation](08-evaluation.md)
 

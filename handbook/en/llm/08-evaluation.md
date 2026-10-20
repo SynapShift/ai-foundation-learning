@@ -1,6 +1,6 @@
 # Chapter 8: Evaluation, Generalization, and Reasoning
 
-[阅读中文版](https://synapshift.github.io/ai-foundation-learning/zh/llm/08-evaluation/)
+[阅读中文版](https://github.com/SynapShift/ai-foundation-learning/blob/main/handbook/zh/llm/08-evaluation.md)
 
 [Previous: Instruction and preference alignment](07-alignment.md) | [Next: Agent and Harness](09-agent-harness.md)
 

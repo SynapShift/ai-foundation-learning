@@ -1,6 +1,6 @@
 # Chapter 7: Instruction and Preference Alignment
 
-[阅读中文版](https://synapshift.github.io/ai-foundation-learning/zh/llm/07-alignment/)
+[阅读中文版](https://github.com/SynapShift/ai-foundation-learning/blob/main/handbook/zh/llm/07-alignment.md)
 
 [Previous: Pretraining](06-pretraining.md) | [Next: Evaluation](08-evaluation.md)
 

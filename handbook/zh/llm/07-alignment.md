@@ -1,6 +1,6 @@
 # 第 7 章：指令与偏好对齐
 
-[Read in English](https://synapshift.github.io/ai-foundation-learning/en/llm/07-alignment/)
+[Read in English](https://github.com/SynapShift/ai-foundation-learning/blob/main/handbook/en/llm/07-alignment.md)
 
 [上一章：预训练](06-pretraining.md) | [下一章：评估](08-evaluation.md)
 

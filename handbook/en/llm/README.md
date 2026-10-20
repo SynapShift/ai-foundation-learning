@@ -1,4 +1,4 @@
-# LLM Course
+# LLM Course Contents
 
 Read in dependency order or jump to a topic. Every chapter can stand on its own.
 

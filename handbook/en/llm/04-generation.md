@@ -1,6 +1,6 @@
 # Chapter 4: Autoregressive Generation
 
-[阅读中文版](https://synapshift.github.io/ai-foundation-learning/zh/llm/04-generation/)
+[阅读中文版](https://github.com/SynapShift/ai-foundation-learning/blob/main/handbook/zh/llm/04-generation.md)
 
 [Previous: Transformer block](03-transformer-block.md) | [Next: Inference engineering](05-inference-engineering.md)
 

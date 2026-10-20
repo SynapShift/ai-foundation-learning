@@ -1,6 +1,6 @@
 # 第 1 章：Attention 与 Q/K/V
 
-[Read in English](https://synapshift.github.io/ai-foundation-learning/en/llm/01-attention/)
+[Read in English](https://github.com/SynapShift/ai-foundation-learning/blob/main/handbook/en/llm/01-attention.md)
 
 [下一章：Hidden State 与输出](02-hidden-states-and-output.md)
 

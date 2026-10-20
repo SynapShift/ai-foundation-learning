@@ -1,6 +1,6 @@
 # 第 8 章：评估、泛化与推理
 
-[Read in English](https://synapshift.github.io/ai-foundation-learning/en/llm/08-evaluation/)
+[Read in English](https://github.com/SynapShift/ai-foundation-learning/blob/main/handbook/en/llm/08-evaluation.md)
 
 [上一章：指令与偏好对齐](07-alignment.md) | [下一章：Agent 与 Harness](09-agent-harness.md)
 

@@ -1,6 +1,6 @@
 # Chapter 2: Hidden States, Logits, and Two Softmaxes
 
-[阅读中文版](https://synapshift.github.io/ai-foundation-learning/zh/llm/02-hidden-states-and-output/)
+[阅读中文版](https://github.com/SynapShift/ai-foundation-learning/blob/main/handbook/zh/llm/02-hidden-states-and-output.md)
 
 [Previous: Attention](01-attention.md) | [Next: Transformer block](03-transformer-block.md)
 

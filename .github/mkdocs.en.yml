@@ -26,9 +26,9 @@ extra:
       link: /ai-foundation-learning/en/
       lang: en
 nav:
-  - Home: index.md
+  - Home: README.md
   - LLM:
-      - Course index: llm/index.md
+      - Course index: llm/README.md
       - 01 Attention: llm/01-attention.md
       - 02 Hidden States and Softmax: llm/02-hidden-states-and-output.md
       - 03 Transformer Block: llm/03-transformer-block.md

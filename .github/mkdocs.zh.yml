@@ -26,9 +26,9 @@ extra:
       link: /ai-foundation-learning/en/
       lang: en
 nav:
-  - 首页: index.md
+  - 首页: README.md
   - LLM:
-      - 课程目录: llm/index.md
+      - 课程目录: llm/README.md
       - 01 Attention: llm/01-attention.md
       - 02 Hidden State 与 Softmax: llm/02-hidden-states-and-output.md
       - 03 Transformer Block: llm/03-transformer-block.md

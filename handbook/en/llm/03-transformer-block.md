@@ -1,6 +1,6 @@
 # Chapter 3: Transformer Block Flow
 
-[阅读中文版](https://synapshift.github.io/ai-foundation-learning/zh/llm/03-transformer-block/)
+[阅读中文版](https://github.com/SynapShift/ai-foundation-learning/blob/main/handbook/zh/llm/03-transformer-block.md)
 
 [Previous: Hidden states and output](02-hidden-states-and-output.md) | [Next: Autoregressive generation](04-generation.md)
 

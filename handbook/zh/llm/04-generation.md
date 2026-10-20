@@ -1,6 +1,6 @@
 # 第 4 章：自回归生成
 
-[Read in English](https://synapshift.github.io/ai-foundation-learning/en/llm/04-generation/)
+[Read in English](https://github.com/SynapShift/ai-foundation-learning/blob/main/handbook/en/llm/04-generation.md)
 
 [上一章：Transformer Block](03-transformer-block.md) | [下一章：推理工程](05-inference-engineering.md)
 

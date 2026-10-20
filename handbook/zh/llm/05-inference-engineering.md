@@ -1,6 +1,6 @@
 # 第 5 章：现代架构与推理工程
 
-[Read in English](https://synapshift.github.io/ai-foundation-learning/en/llm/05-inference-engineering/)
+[Read in English](https://github.com/SynapShift/ai-foundation-learning/blob/main/handbook/en/llm/05-inference-engineering.md)
 
 [上一章：自回归生成](04-generation.md) | [下一章：预训练](06-pretraining.md)
 

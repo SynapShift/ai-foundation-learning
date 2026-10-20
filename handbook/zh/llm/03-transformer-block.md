@@ -1,6 +1,6 @@
 # 第 3 章：Transformer Block 的数据流
 
-[Read in English](https://synapshift.github.io/ai-foundation-learning/en/llm/03-transformer-block/)
+[Read in English](https://github.com/SynapShift/ai-foundation-learning/blob/main/handbook/en/llm/03-transformer-block.md)
 
 [上一章：Hidden State 与输出](02-hidden-states-and-output.md) | [下一章：自回归生成](04-generation.md)
 

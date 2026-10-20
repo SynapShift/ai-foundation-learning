@@ -1,6 +1,6 @@
 # Chapter 6: Pretraining and Parameter Updates
 
-[阅读中文版](https://synapshift.github.io/ai-foundation-learning/zh/llm/06-pretraining/)
+[阅读中文版](https://github.com/SynapShift/ai-foundation-learning/blob/main/handbook/zh/llm/06-pretraining.md)
 
 [Previous: Inference engineering](05-inference-engineering.md) | [Next: Instruction and preference alignment](07-alignment.md)
 
