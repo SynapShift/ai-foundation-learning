@@ -4,7 +4,7 @@
 
 这份九章手册沿着一条线讲：从 Transformer 内部的一个 token，到能调用工具的 Agent 系统。重点不是背名词，而是看每个机制负责什么、不负责什么，以及它们怎样接起来。每章都有讲解、容易混淆的边界、理解题和参考答案。
 
-[English README](https://github.com/SynapShift/ai-foundation-learning/blob/main/README.md) · [English web edition](https://synapshift.github.io/ai-foundation-learning/en/)
+[阅读中文版网页](https://synapshift.github.io/ai-foundation-learning/zh/) · [English README](https://github.com/SynapShift/ai-foundation-learning/blob/main/README.md) · [English web edition](https://synapshift.github.io/ai-foundation-learning/en/)
 
 ## 你能学到什么？
 
