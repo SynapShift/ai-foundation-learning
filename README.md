@@ -31,10 +31,4 @@ Read in order for the full learning path, or jump to a topic when revisiting a c
 
 建议首次按章节顺序阅读；复习时可直接跳转到相关主题。公开内容只讨论可复用的知识，不记录任何人的学习过程。
 
-## Privacy | 隐私边界
-
-Only depersonalized handbook content is public. Personal learning notes, progress, assessment, and actual responses belong in the Git-ignored `.local-learning/` directory; they are not part of this repository or website.
-
-公开仓库仅包含去个人化的手册内容。个人学习笔记、进度、评估和真实答题记录保存在被 Git 忽略的 `.local-learning/`，不会放入仓库或网站。
-
 Licensed under [MIT](LICENSE).
